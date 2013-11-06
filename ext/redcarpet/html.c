@@ -621,7 +621,7 @@ toc_header(struct buf *ob, const struct buf *text, int level, void *opaque)
 
 		if (level > options->toc_data.current_level) {
 			while (level > options->toc_data.current_level) {
-				BUFPUTSL(ob, "<ul>\n<li>\n");
+				BUFPUTSL(ob, "<ul class=\"nav\">\n<li>\n");
 				options->toc_data.current_level++;
 			}
 		} else if (level < options->toc_data.current_level) {
